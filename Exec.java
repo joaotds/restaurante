@@ -42,46 +42,46 @@ public class Exec {
 					Pedido p = new Pedido();
 					
 					//Nome do cliente
-					System.out.print("Informe o Numero: ");
-					
+					System.out.print("Informe o Nome do Cliente: ");
 					p.setNomeCliente(sc.nextLine());
 					
 					//Nome do garçom
-					Pedido g = new Pedido();
+					//Pedido g = new Pedido();
 					System.out.print("Informe o Nome do Garçom: ");
-					g.setNomeGarcom(sc.nextLine());
+					p.setNomeGarcom(sc.nextLine());
 
 					
-				int numPrato;
+					int numPrato;
+					//syso
+					System.out.println("Informe o Numero do prato: ");
+					numPrato = Integer.parseInt(sc.nextLine());
 				
-				numPrato = Integer.parseInt(sc.nextLine());
-				
-				switch (numPrato) {
+					switch (numPrato) {
 					
 					
-						case "1":
-							
-							
+						case 1:
+							p.setPrato(pratos.get(0));
 							break;
 							
-						case "2":
-							nomePrato.setNome(pratos.get(numPrato));
+							
+						case 2:
+							p.setPrato(pratos.get(1));
 							break;
 							
-						case "3":
-							nomePrato.setNome(pratos.get(numPrato));
+						case 3:
+							p.setPrato(pratos.get(2));
 							break;
 							
-						case "4":
-							nomePrato.setNome(pratos.get(numPrato));
+						case 4:
+							p.setPrato(pratos.get(3));
 							break;
 							
-						case "5":
-							(pratos.get(numPrato));
+						case 5:
+							p.setPrato(pratos.get(4));
 							break;
 					}
 					
-					pedidos.add(nomeprato);
+					pedidos.add(p);
 					break;
 					
 				case 2: 
@@ -97,9 +97,13 @@ public class Exec {
 					
 				case 3: 
 					for (Pedido c : pedidos) {
-						System.out.println(c.getPrato());						
+						System.out.println("O cliente " + c.getNomeCliente() + " Foi atendido pelo garçom " + c.getNomeGarcom() + " e pediu o prato: " + c.getPrato().getNome());						
 					}
 					
+					break;
+					
+				case 4:
+					System.out.println("O total de vendas foi: " + pedidos.size() + " Vendas!");
 					break;
 					
 				case 0: 
