@@ -7,14 +7,14 @@ public class Prato {
 	private Double valor;
 	
 	
-		public Prato(Integer numero, String nome, Double valor) {
+	public Prato(Integer numero, String nome, Double valor) {
 		super();
 		this.numero = numero;
 		this.nome = nome;
 		this.valor = valor;
 		
 		
-		return String.format(dados, this.modelo, this.anoFabricacao, fab);
+		//return String.format(Prato, this.modelo, this.anoFabricacao, fab);
 	}
 		
 	public Integer getNumero() {
